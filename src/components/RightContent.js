@@ -7,11 +7,11 @@ const RightContent = () => {
     setError(null);
 
     if (email.length == 0) {
-      setError("Please enter an email address");
+      setError("Required");
       return false;
     }
     if (!/^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {
-      setError("Invalid email");
+      setError("Please enter a valid email");
       return false;
     } else {
       window.location.href = "https://app.loch.one/welcome";
